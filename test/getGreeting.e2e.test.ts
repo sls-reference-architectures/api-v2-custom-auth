@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 
-const baseURL = 'TODO';
+const baseURL = process.env.API_URL;
 
 describe('When getting greeting', () => {
   describe('with valid auth header', () => {
