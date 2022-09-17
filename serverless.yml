@@ -1,0 +1,48 @@
+service: api-v2-custom-auth
+
+custom:
+  logRetentionInDays: 7
+  prune:
+    automatic: true
+    number: 1
+
+package:
+  individually: true
+
+provider:
+  deploymentBucket:
+    name: com.reference-architecture.deploys
+    maxPreviousDeploymentArtifacts: 5
+    serverSideEncryption: AES256
+  httpApi:
+    authorizers:
+      customAuthorizer:
+        type: request
+        functionName: authorizerFunction
+        enableSimpleResponses: true
+        identitySource:
+          - $request.header.Authorization
+  name: aws
+  runtime: nodejs16.x
+  stage: dev
+  tags:
+    lumigo:auto-trace: true
+
+plugins:
+  - serverless-esbuild
+  - serverless-deployment-bucket
+  - serverless-iam-roles-per-function
+  - serverless-plugin-log-retention
+  - serverless-prune-plugin
+
+functions:
+  getGreeting:
+    handler: src/handler.default
+    events:
+      - httpApi:
+          method: GET
+          path: /greeting
+          authorizer:
+            name: customAuthorizer
+  authorizerFunction:
+    handler: src/authorizer.default
