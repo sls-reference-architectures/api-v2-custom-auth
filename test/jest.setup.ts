@@ -7,7 +7,7 @@ const region = process.env.AWS_REGION || 'us-east-1';
 const stage = process.env.STAGE || 'dev';
 
 const setup = async (): Promise<void> => {
-  const stackName = `api-v2-jwt-auth-${stage}`;
+  const stackName = `api-v2-custom-auth-${stage}`;
 
   const stack = await getStack(stackName);
   const apiUrl = getApiUrl(stack);
