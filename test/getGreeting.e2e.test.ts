@@ -1,59 +1,61 @@
-import axios, { AxiosResponse } from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const baseURL = process.env.API_URL;
 
 describe('When getting greeting', () => {
   describe('with valid auth header', () => {
-    let getResult: AxiosResponse;
-
-    beforeAll(async () => {
-      const axiosInstance = axios.create({
+    it('should return 200', async () => {
+      // ARRANGE
+      const numberParsableToken = '123456';
+      const options: AxiosRequestConfig = {
         baseURL,
         headers: {
-          Authorization: 'Bearer 123456',
+          Authorization: `Bearer ${numberParsableToken}`,
         },
         validateStatus: () => true,
-      });
-      getResult = await axiosInstance.get('/greeting');
-    });
+      };
 
-    it('should return 200', async () => {
+      // ACT
+      const getResult = await axios.get('/greeting', options);
+
+      // ASSERT
       expect(getResult.status).toEqual(200);
     });
   });
 
   describe('with invalid auth header', () => {
-    let getResult: AxiosResponse;
-
-    beforeAll(async () => {
-      const axiosInstance = axios.create({
+    it('should return 403', async () => {
+      // ARRANGE
+      const nonNumberParsableToken = 'abcdef';
+      const options: AxiosRequestConfig = {
         baseURL,
         headers: {
-          Authorization: 'Bearer not-valid',
+          Authorization: `Bearer ${nonNumberParsableToken}`,
         },
         validateStatus: () => true,
-      });
-      getResult = await axiosInstance.get('/greeting');
-    });
+      };
 
-    it('should return 403', async () => {
+      // ACT
+      const getResult = await axios.get('/greeting', options);
+
+      // ASSERT
       expect(getResult.status).toEqual(403);
     });
   });
 
   describe('with missing auth header', () => {
-    let getResult: AxiosResponse;
-
-    beforeAll(async () => {
-      const axiosInstance = axios.create({
+    it('should return 401', async () => {
+      // ARRANGE
+      const options: AxiosRequestConfig = {
         baseURL,
         headers: {},
         validateStatus: () => true,
-      });
-      getResult = await axiosInstance.get('/greeting');
-    });
+      };
 
-    it('should return 401', async () => {
+      // ACT
+      const getResult = await axios.get('/greeting', options);
+
+      // ASSERT
       expect(getResult.status).toEqual(401);
     });
   });
