@@ -31,7 +31,7 @@
     "@swc/jest": "^0.2.29",
     "@tsconfig/node16": "^16.1.1",
     "@types/aws-lambda": "^8.10.125",
-    "@types/http-errors": "^2.0.2",
+    "@types/http-errors": "^2.0.4",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.10.3",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
