@@ -7,7 +7,7 @@ import httpErrorHandler from '@middy/http-error-handler';
 import middy from '@middy/core';
 
 const getGreeting = async (event: Event): Promise<Result> => {
-  Logger.debug('In getGreeting()', { event });
+  Logger.debug('In getGreeting handler', { event });
 
   return {
     statusCode: 200,
