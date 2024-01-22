@@ -28,7 +28,7 @@
     "@aws-sdk/client-cloudformation": "^3.470.0",
     "@faker-js/faker": "^8.3.1",
     "@swc/core": "^1.3.105",
-    "@swc/jest": "^0.2.29",
+    "@swc/jest": "^0.2.31",
     "@tsconfig/node16": "^16.1.1",
     "@types/aws-lambda": "^8.10.131",
     "@types/http-errors": "^2.0.4",
