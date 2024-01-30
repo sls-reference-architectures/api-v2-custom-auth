@@ -30,7 +30,7 @@
     "@swc/core": "^1.3.105",
     "@swc/jest": "^0.2.31",
     "@tsconfig/node16": "^16.1.1",
-    "@types/aws-lambda": "^8.10.132",
+    "@types/aws-lambda": "^8.10.133",
     "@types/http-errors": "^2.0.4",
     "@types/jest": "^29.5.11",
     "@types/node": "^20.11.2",
