@@ -33,7 +33,7 @@
     "@types/aws-lambda": "^8.10.137",
     "@types/http-errors": "^2.0.4",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.9",
     "@typescript-eslint/eslint-plugin": "^7.7.1",
     "@typescript-eslint/parser": "^7.7.1",
     "axios": "^1.6.8",
