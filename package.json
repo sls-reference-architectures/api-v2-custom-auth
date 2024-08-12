@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/sls-reference-architectures/api-v2-custom-auth#readme",
   "devDependencies": {
-    "@aws-sdk/client-cloudformation": "^3.623.0",
+    "@aws-sdk/client-cloudformation": "^3.629.0",
     "@faker-js/faker": "^8.4.1",
     "@swc/core": "^1.7.6",
     "@swc/jest": "^0.2.36",
@@ -59,8 +59,8 @@
   },
   "dependencies": {
     "@dazn/lambda-powertools-logger": "^1.28.1",
-    "@middy/core": "^4.7.0",
-    "@middy/http-error-handler": "^4.7.0",
+    "@middy/core": "^5.4.6",
+    "@middy/http-error-handler": "^5.4.6",
     "http-errors": "^2.0.0"
   },
   "lint-staged": {
