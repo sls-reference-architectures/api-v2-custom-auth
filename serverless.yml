@@ -23,7 +23,7 @@ provider:
         identitySource:
           - $request.header.Authorization
   name: aws
-  runtime: nodejs16.x
+  runtime: nodejs20.x
   stage: dev
   tags:
     lumigo:auto-trace: 'true'

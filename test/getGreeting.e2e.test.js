@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 
 const baseURL = process.env.API_URL;
 
@@ -7,7 +7,7 @@ describe('When getting greeting', () => {
     it('should return 200', async () => {
       // ARRANGE
       const numberParsableToken = '123456';
-      const options: AxiosRequestConfig = {
+      const options = {
         baseURL,
         headers: {
           Authorization: `Bearer ${numberParsableToken}`,
@@ -27,7 +27,7 @@ describe('When getting greeting', () => {
     it('should return 403', async () => {
       // ARRANGE
       const nonNumberParsableToken = 'abcdef';
-      const options: AxiosRequestConfig = {
+      const options = {
         baseURL,
         headers: {
           Authorization: `Bearer ${nonNumberParsableToken}`,
@@ -46,7 +46,7 @@ describe('When getting greeting', () => {
   describe('with missing auth header', () => {
     it('should return 401', async () => {
       // ARRANGE
-      const options: AxiosRequestConfig = {
+      const options = {
         baseURL,
         headers: {},
         validateStatus: () => true,
