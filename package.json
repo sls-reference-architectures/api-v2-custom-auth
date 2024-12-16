@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/sls-reference-architectures/api-v2-custom-auth#readme",
   "devDependencies": {
-    "@aws-sdk/client-cloudformation": "^3.709.0",
+    "@aws-sdk/client-cloudformation": "^3.712.0",
     "@faker-js/faker": "^9.3.0",
     "@swc/core": "^1.10.1",
     "@swc/jest": "^0.2.37",
