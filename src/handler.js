@@ -12,7 +12,7 @@ const getGreeting = async (event) => {
 };
 
 const handler = middy()
-  .use(ioLogger(ioLoggerConfig('YourServiceName')))
+  .use(ioLogger(ioLoggerConfig('v2CustomAuth')))
   .use(httpErrorHandler())
   .handler(getGreeting);
 
