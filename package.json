@@ -47,8 +47,8 @@
   },
   "dependencies": {
     "@dazn/lambda-powertools-logger": "^1.28.1",
-    "@middy/core": "^5.4.6",
-    "@middy/http-error-handler": "^5.4.6",
+    "@middy/core": "^7.1.4",
+    "@middy/http-error-handler": "^7.1.4",
     "http-errors": "^2.0.0"
   },
   "lint-staged": {
