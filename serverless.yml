@@ -1,12 +1,11 @@
 service: api-v2-custom-auth
 
+licenseKey: ${ssm:/aws/reference/secretsmanager/serverless-framework-access-key}
+
 custom:
   prune:
     automatic: true
     number: 1
-
-package:
-  individually: true
 
 provider:
   logRetentionInDays: 7
@@ -28,12 +27,6 @@ provider:
   tags:
     lumigo:auto-trace: 'true'
 
-plugins:
-  - serverless-esbuild
-  - serverless-deployment-bucket
-  - serverless-iam-roles-per-function
-  - serverless-prune-plugin
-
 functions:
   getGreeting:
     handler: src/handler.default
@@ -45,3 +38,19 @@ functions:
             name: customAuthorizer
   authorizerFunction:
     handler: src/authorizer.default
+
+build:
+  esbuild:
+    bundle: true
+    minify: true
+    exclude:
+      - '@aws-sdk/*'
+
+package:
+  individually: true
+
+plugins:
+  - serverless-deployment-bucket
+  - serverless-iam-roles-per-function
+
+
