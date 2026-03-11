@@ -43,7 +43,7 @@
     "serverless": "^4.4.16",
     "serverless-deployment-bucket": "^1.6.0",
     "serverless-iam-roles-per-function": "^3.2.0",
-    "serverless-plugin-log-retention": "^2.0.0"
+    "serverless-plugin-log-retention": "^2.1.0"
   },
   "dependencies": {
     "@dazn/lambda-powertools-logger": "^1.28.1",
