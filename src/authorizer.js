@@ -1,11 +1,13 @@
-import Logger from '@dazn/lambda-powertools-logger';
+import { Logger } from '@aws-lambda-powertools/logger';
+
+const logger = new Logger({ serviceName: 'v2CustomAuth' });
 
 const authorizer = async (event) => {
-  Logger.debug('In authorizer handler', { event });
+  logger.debug('In authorizer handler', { event });
   const {
     headers: { authorization: authHeader },
   } = event;
-  Logger.debug('got authHeader', { headers: event.headers, authHeader });
+  logger.debug('got authHeader', { headers: event.headers, authHeader });
   let isAuthorized = false;
   if (isValid(authHeader)) {
     isAuthorized = true;
