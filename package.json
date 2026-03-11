@@ -46,9 +46,11 @@
     "serverless-plugin-log-retention": "^2.1.0"
   },
   "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.31.0",
     "@dazn/lambda-powertools-logger": "^1.28.1",
     "@middy/core": "^7.1.4",
     "@middy/http-error-handler": "^7.1.4",
+    "@middy/input-output-logger": "^7.1.4",
     "http-errors": "^2.0.0"
   },
   "lint-staged": {
