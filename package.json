@@ -50,7 +50,7 @@
     "@middy/core": "^7.1.4",
     "@middy/http-error-handler": "^7.1.4",
     "@middy/input-output-logger": "^7.4.0",
-    "http-errors": "^2.0.0"
+    "http-errors": "^2.0.1"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
