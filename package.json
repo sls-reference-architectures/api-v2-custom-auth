@@ -51,7 +51,7 @@
     "@aws-lambda-powertools/logger": "^2.31.0",
     "@middy/core": "^7.5.0",
     "@middy/http-error-handler": "^7.5.0",
-    "@middy/input-output-logger": "^7.5.0",
+    "@middy/input-output-logger": "^7.6.7",
     "http-errors": "^2.0.1"
   },
   "lint-staged": {
