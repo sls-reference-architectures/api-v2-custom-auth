@@ -106,3 +106,6 @@ dist
 
 # VS Code directories
 .vscode/*
+
+# Claude Code (personal settings only; settings.json is committed)
+.claude/settings.local.json
