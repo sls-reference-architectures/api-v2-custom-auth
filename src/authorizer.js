@@ -2,7 +2,7 @@ import { Logger } from '@aws-lambda-powertools/logger';
 
 const logger = new Logger({ serviceName: 'v2CustomAuth' });
 
-const authorizer = async (event) => {
+export const handler = async (event) => {
   logger.debug('In authorizer handler', { event });
   const {
     headers: { authorization: authHeader },
@@ -35,5 +35,3 @@ const parseBearerToken = (value) => {
 };
 
 const isNumeric = (token) => /^-?\d+$/.test(token);
-
-export default authorizer;

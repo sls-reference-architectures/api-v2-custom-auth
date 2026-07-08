@@ -11,9 +11,7 @@ const getGreeting = async (event) => {
   };
 };
 
-const handler = middy()
+export const handler = middy()
   .use(ioLogger(ioLoggerConfig('v2CustomAuth')))
   .use(httpErrorHandler())
   .handler(getGreeting);
-
-export default handler;
