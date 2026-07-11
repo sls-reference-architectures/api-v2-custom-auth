@@ -109,3 +109,5 @@ dist
 
 # Claude Code (personal settings only; settings.json is committed)
 .claude/settings.local.json
+# MacOS
+.DS_Store
