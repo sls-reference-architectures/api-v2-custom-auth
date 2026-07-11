@@ -18,7 +18,7 @@
     "url": "git+https://github.com/sls-reference-architectures/api-v2-custom-auth.git"
   },
   "author": "Seth Orell",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sls-reference-architectures/api-v2-custom-auth/issues"
   },
