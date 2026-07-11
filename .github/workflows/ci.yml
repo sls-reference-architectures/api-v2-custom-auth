@@ -40,6 +40,5 @@ jobs:
         run: npm run test:e2e
         env:
           NODE_ENV: dev
-      # The following is for my reference architecture stack only
-      # - name: Remove stacks from AWS
-      #   run: npm run remove
+      - name: Tear down stack
+        run: npm run remove
