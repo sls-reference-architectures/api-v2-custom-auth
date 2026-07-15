@@ -8,6 +8,7 @@ custom:
     number: 1
 
 provider:
+  architecture: arm64
   logRetentionInDays: 7
   deploymentBucket:
     name: com.reference-architecture.deploys
