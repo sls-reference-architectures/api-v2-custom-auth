@@ -27,7 +27,7 @@
     "@aws-sdk/client-cloudformation": "^3.1064.0",
     "@eslint/js": "^10.0.1",
     "@faker-js/faker": "^10.4.0",
-    "@swc/core": "^1.15.18",
+    "@swc/core": "^1.15.46",
     "@swc/jest": "^0.2.39",
     "axios": "^1.18.0",
     "esbuild": "0.28",
