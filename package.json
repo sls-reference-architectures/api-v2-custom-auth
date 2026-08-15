@@ -26,32 +26,27 @@
   "devDependencies": {
     "@aws-sdk/client-cloudformation": "^3.1105.0",
     "@eslint/js": "^10.0.1",
-    "@faker-js/faker": "^10.4.0",
     "@swc/core": "^1.15.47",
     "@swc/jest": "^0.2.39",
     "axios": "^1.19.0",
     "esbuild": "0.28",
     "eslint": "^10.8.1",
-    "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-jest": "^29.16.0",
     "eslint-plugin-no-only-tests": "^3.4.0",
     "globals": "^17.9.0",
     "husky": "^9.1.7",
     "jest": "^30.4.2",
-    "jiti": "^2.7.0",
     "lint-staged": "^17.3.0",
     "prettier": "^3.9.6",
     "serverless": "^4.4.16",
     "serverless-deployment-bucket": "^1.6.0",
-    "serverless-iam-roles-per-function": "^3.2.0",
-    "serverless-plugin-log-retention": "^2.1.0"
+    "serverless-iam-roles-per-function": "^3.2.0"
   },
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.34.0",
     "@middy/core": "^7.7.2",
     "@middy/http-error-handler": "^7.7.2",
-    "@middy/input-output-logger": "^7.7.2",
-    "http-errors": "^2.0.1"
+    "@middy/input-output-logger": "^7.7.2"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
