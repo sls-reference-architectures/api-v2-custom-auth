@@ -1,4 +1,4 @@
-import { getRestServiceEndpoint as getApiUrl, getStack } from './setupUtils';
+import { getRestServiceEndpoint as getApiUrl, getStack, waitForApiReady } from './setupUtils';
 
 const region = process.env.AWS_REGION || 'us-east-1';
 const stage = process.env.STAGE || 'dev';
@@ -8,6 +8,7 @@ const setup = async () => {
 
   const stack = await getStack(stackName);
   const apiUrl = getApiUrl(stack);
+  await waitForApiReady({ apiUrl, path: '/greeting' });
 
   process.env.AWS_REGION = region;
   process.env.STAGE = stage;
