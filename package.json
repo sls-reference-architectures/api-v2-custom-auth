@@ -43,7 +43,7 @@
     "serverless-iam-roles-per-function": "^3.2.0"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "^2.34.0",
+    "@aws-lambda-powertools/logger": "^2.35.0",
     "@middy/core": "^7.9.2",
     "@middy/http-error-handler": "^7.9.2",
     "@middy/input-output-logger": "^7.9.2"
