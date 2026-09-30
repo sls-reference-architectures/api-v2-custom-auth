@@ -49,7 +49,6 @@ package:
   individually: true
 
 plugins:
-  - serverless-deployment-bucket
   - serverless-iam-roles-per-function
 
 
