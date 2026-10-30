@@ -38,7 +38,7 @@
     "jest": "^30.4.2",
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
-    "serverless": "^4.43.0",
+    "serverless": "^4.46.0",
     "serverless-iam-roles-per-function": "^3.2.0"
   },
   "dependencies": {
